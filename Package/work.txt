@@ -1,0 +1,21 @@
+//InetAddress:
+import java.net.InetAddress;
+
+//getByName();
+//getHostName();
+//getByAddress();
+//getHostAddress();
+//isAnyLocalAddress();
+//isLinkLocalAddress();
+//isLoopbackAddress();
+//getAllByName();
+
+
+Write Short Notes on:
+1. IPV4 Address
+2. IPV6 Address
+3. IP Address
+
+
+DEfine UniCast and multicast Address
+What are Factory method in InetAddress? 
