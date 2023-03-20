@@ -20,6 +20,7 @@ public class CreateFIle {
         }
 
         try {
+
             FileReader fr = new FileReader(myFile);
             BufferedReader br = new BufferedReader(fr);
             String line = br.readLine();
