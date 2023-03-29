@@ -9,7 +9,7 @@ public class DataFormURL {
         // Scanner sc = new Scanner(System.in);
         try {
 
-            URL url = new URL("www.google.com");
+            URL url = new URL("http://www.google.com");
             URLConnection ucon = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(ucon.getInputStream()));
             String line;

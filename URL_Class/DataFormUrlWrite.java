@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class DataFormUrlWrite {
+
     public static String printData(String text) throws IOException {
         URL url = new URL(text);
         URLConnection ucon = url.openConnection();
@@ -21,12 +22,13 @@ public class DataFormUrlWrite {
 
     public static void WritteData(String text) {
         try {
-            FileWriter fileWrite = new FileWriter("WriteHere.txt");
+            File file = new File("WriteHere.txt");
+            FileWriter fileWrite = new FileWriter(file);
             fileWrite.write(text);
             fileWrite.close();
 
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("Error during writing a files");
         }
     }
 
@@ -40,7 +42,7 @@ class Program {
             String text = sc.nextLine();
             String content = DataFormUrlWrite.printData(text);
             System.out.println(content);
-            DataFormUrlWrite.WritteData(content);
+            DataFormUrlWrite.WritteData(text);
             sc.close();
         } catch (Exception e) {
             System.out.println("Check your code" + e);
