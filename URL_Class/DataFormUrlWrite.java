@@ -42,7 +42,7 @@ class Program {
             String text = sc.nextLine();
             String content = DataFormUrlWrite.printData(text);
             System.out.println(content);
-            DataFormUrlWrite.WritteData(text);
+            DataFormUrlWrite.WritteData(content);
             sc.close();
         } catch (Exception e) {
             System.out.println("Check your code" + e);
