@@ -11,7 +11,7 @@ import java.util.Map;
 public class OpenConnection {
     public static void main(String[] args) throws IOException {
         try {
-            URL url = new URL("https://www.youtube.com");
+            URL url = new URL("https://www.google.com");
             URLConnection uc = url.openConnection();
             Map<String, List<String>> stream = uc.getHeaderFields();
             System.out.println(stream);
