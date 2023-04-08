@@ -22,10 +22,11 @@ public class DataFormUrlWrite {
 
     public static void WritteData(String text) {
         try {
-            File file = new File("WriteHere.txt");
-            FileWriter fileWrite = new FileWriter(file);
-            fileWrite.write(text);
-            fileWrite.close();
+            String data = DataFormUrlWrite.printData(text);
+            FileWriter writer = new FileWriter("URLText.html");
+            writer.write(data);
+            writer.close();
+            System.out.println("CompletelyWrite");
 
         } catch (Exception e) {
             System.out.println("Error during writing a files");
@@ -42,7 +43,7 @@ class Program {
             String text = sc.nextLine();
             String content = DataFormUrlWrite.printData(text);
             System.out.println(content);
-            DataFormUrlWrite.WritteData(content);
+            DataFormUrlWrite.WritteData(text);
             sc.close();
         } catch (Exception e) {
             System.out.println("Check your code" + e);

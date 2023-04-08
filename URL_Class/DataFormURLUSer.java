@@ -25,6 +25,7 @@ class Program {
     public static void main(String[] args) {
         try {
             Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the URL:");
             String text = sc.nextLine();
             String content = DataFormURLUSer.printData(text);
             System.out.println(content);
