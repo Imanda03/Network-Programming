@@ -11,12 +11,12 @@ public class Suites {
     public static void main(String[] args) {
         try {
             SSLSocketFactory sf = (SSLSocketFactory) SSLSocketFactory.getDefault();
-            SSLSocket socket = (SSLSocket) sf.createSocket("www.google.com",440);
+            SSLSocket socket = (SSLSocket) sf.createSocket("www.google.com",443);
 
             String[] suits = ((SSLSocket) socket).getSupportedCipherSuites();
-            ((SSLSocket) socket).setEnabledCipherSuites(suits);
-            ((SSLSocket) socket).addHandshakeCompletedListener(new MyHandShake());
-            ((SSLSocket) socket).startHandshake();
+            socket.setEnabledCipherSuites(suits);
+            socket.addHandshakeCompletedListener(new MyHandShake());
+            socket.startHandshake();
             System.out.println("Conntectd to: " + socket.getRemoteSocketAddress());
 
          } catch (Exception e) {
@@ -28,13 +28,9 @@ public class Suites {
 }
 
 class MyHandShake implements HandshakeCompletedListener{
-    public void handShakeCompleted(HandshakeCompletedEvent e){
+    public void handshakeCompleted(HandshakeCompletedEvent e){
         System.out.println("Session Info " + e.getSession());
     }
 
-    @Override
-    public void handshakeCompleted(HandshakeCompletedEvent arg0) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handshakeCompleted'");
-    }
+   
 }

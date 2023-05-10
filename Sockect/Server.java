@@ -8,7 +8,7 @@ public class Server {
         try {
             ServerSocket server = new ServerSocket(8000);
             Socket client;
-            System.out.println("Waiting for the cliet to connect");
+            System.out.println("Waiting for the client to connect");
             client = server.accept();
             DataOutputStream dos= new DataOutputStream(client.getOutputStream());
             DataInputStream dis = new DataInputStream(client.getInputStream());
