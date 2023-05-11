@@ -56,6 +56,7 @@ public class UsingGetterSetter {
     public static void main(String[] args) {
         UsingGetterSetter udpExample = new UsingGetterSetter();
         udpExample.send("Hello, World!");
+        udpExample.receive();
         System.out.println("Received message: " + udpExample.receive());
     }
 }

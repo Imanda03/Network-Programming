@@ -20,7 +20,7 @@ public class HTTP_Example {
             cookieStore.add(uri2, cookie2);
             cookieStore.add(uri1, cookie);
 
-            List<HttpCookie> list = cookieStore.getCookies();
+            int list = cookieStore.getCookies();
             System.out.println("Store Cookie: " + list);
 
             File myFile = new File("helloWorld.txt");
