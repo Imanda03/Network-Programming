@@ -9,6 +9,7 @@ public class ServerSir {
             byte[] buffer;
             buffer = new byte[2];
             byte[] send = { 6, 9 };
+
             DatagramPacket dp = new DatagramPacket(buffer, buffer.length);
             ds.receive(dp);
             DatagramPacket senddp = new DatagramPacket(send, buffer.length, dp.getAddress(), dp.getPort());
