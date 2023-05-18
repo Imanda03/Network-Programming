@@ -8,7 +8,7 @@ public class Client {
             Adder skleton = (Adder) Naming.lookup("rmi://localhost:12345/nist");
             System.out.println(skleton.add(1, 2));
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e);
         }
     }
 }

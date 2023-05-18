@@ -1,6 +1,6 @@
 package RMI;
 
-import java.rmi.server.UnicastRemoteObject;
+import java.rmi.server.*;
 
 public class RemoteAdder extends UnicastRemoteObject implements Adder {
 

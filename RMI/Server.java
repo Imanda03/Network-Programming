@@ -3,6 +3,7 @@ package RMI;
 import java.rmi.*;
 
 public class Server {
+
     public static void main(String[] args) {
         try {
             Adder stub = new RemoteAdder();
